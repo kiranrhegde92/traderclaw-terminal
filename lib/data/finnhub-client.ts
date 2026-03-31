@@ -310,7 +310,7 @@ export async function getStatus(): Promise<{
   rateLimitReset: number
 }> {
   return {
-    configured: isFinnhubConfigured(),
+    configured: isFinnhubConfiguredSync(),
     rateLimitRemaining: Math.max(0, rateLimiter.limit - rateLimiter.requests.length),
     rateLimitReset: rateLimiter.requests.length > 0
       ? rateLimiter.requests[0] + rateLimiter.window

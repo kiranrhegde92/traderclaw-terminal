@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { mutate } from 'swr'
 import { useAuthStore } from '@/store'
@@ -11,7 +11,7 @@ import { Wifi, WifiOff, Key, User, Lock, ShieldCheck, ExternalLink } from 'lucid
 
 type Broker = 'angelone' | 'zerodha'
 
-export default function ConnectPage() {
+function ConnectPageInner() {
   const router       = useRouter()
   const searchParams = useSearchParams()
   const { isConnected, profile, setSession, clearSession } = useAuthStore()
@@ -319,5 +319,14 @@ export default function ConnectPage() {
         </div>
       </div>
     </>
+  )
+}
+
+
+export default function ConnectPage() {
+  return (
+    <Suspense>
+      <ConnectPageInner />
+    </Suspense>
   )
 }

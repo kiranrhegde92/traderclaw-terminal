@@ -74,7 +74,7 @@ export function useNotifications() {
           vibrate: [200],
           tag: 'traderclaw-alert',
           requireInteraction: false,
-        } as NotificationOptions & { vibrate: number[] })
+        } as any)
       } catch {
         // ServiceWorker notification fallback
         navigator.serviceWorker?.ready?.then(reg => {
@@ -84,7 +84,7 @@ export function useNotifications() {
             badge: '/icon-192x192.png',
             vibrate: [200],
             tag: 'traderclaw-alert',
-          })
+          } as any)
         }).catch(() => {})
       }
     }
