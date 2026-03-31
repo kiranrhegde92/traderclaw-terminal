@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Black background -->
+  <rect width="512" height="512" fill="#0a0a0a"/>
+  <!-- Green terminal border -->
+  <rect x="76" y="76" width="360" height="360" fill="none" stroke="#00ff41" stroke-width="25" rx="25"/>
+  <!-- Terminal text -->
+  <text x="256" y="320" font-size="140" font-weight="bold" fill="#00ff41" text-anchor="middle" font-family="monospace, 'Courier New'">TC</text>
+</svg>

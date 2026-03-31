@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+build/
+
+# Environment
+.env.local
+.env.*.local
+
+# Database (contains user data)
+data/openclaw.db
+data/openclaw.db-shm
+data/openclaw.db-wal
+
+# Debug
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Nested repos / local tools
+Kiranopenalgo/
+android-traderclaw/
+traderclaw-android/
+
+# Misc root files
+*.md
+*.txt
+*.log
+*.db
+*.png
+!README.md
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+.claude/
+scripts/gen_deploy.mjs
+traderclaw-android/
